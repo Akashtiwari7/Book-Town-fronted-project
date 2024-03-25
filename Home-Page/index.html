@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=chrome,edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./style.css" />
+  <title>BookTown HomePage</title>
+</head>
+<body>
+  <header class="main-header">
+    <section
+      class="row-1 d-flex  flex-wrap-reverse flex-sm-nowrap justify-content-between align-content-center align-items-center py-4">
+      <ul class="second-navbar-bi-list-clicked nav-bar list-unstyled position-absolute d-flex flex-column w-100">
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center w-100">
+            <a href="../ProductsPage/LinkedHTMLs/self-dev-index.html" target="_blank" role="button"
+                class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+                rel="noopener noreferrer" style="color: rgb(138, 19, 82);">Self-Development</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center w-100">
+            <a href="../ProductsPage/LinkedHTMLs/philosophy-index.html" target="_blank" role="button"
+                class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+                rel="noopener noreferrer" style="color: #7b067b;">Philosophy</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center w-100">
+            <a href="../ProductsPage/LinkedHTMLs/novels-index.html" target="_blank" role="button"
+                class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+                rel="noopener noreferrer" style="color: #7b067b;">Novels</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center w-100">
+            <a href="../ProductsPage/MainPage/index.html" target="_blank" role="button"
+                class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+                rel="noopener noreferrer">Newest Books</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center w-100">
+            <a href="../ProductsPage/LinkedHTMLs/best.html" target="_blank" role="button"
+                class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+                rel="noopener noreferrer">Best Of BookTown</a>
+        </li>
+        <li id="categorieSelector" class="close-list-btn categorie flex-grow-1 fs-18 text-center w-100">
+            <a role="button"
+                class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+                rel="noopener noreferrer">Close<i class="bi bi-arrow-up ms-2"></i></a>
+        </li>
+    </ul>
+      <a class="d-none d-md-block ms-5" href="./index.html">
+        <img class="logo-name w-50 img-fluid" src="data:image/jpeg;base64,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" alt="logo and name of website" />
+      </a>
+      <a class="d-none d-sm-block d-md-none me-4 pb-1" href="./index.html">
+        <i role="button" class="bi bi-house-door-fill text-danger fs-32 ps-2">
+        </i>
+      </a>
+
+      <div class="personal-profile d-flex gap-3 align-items-center justify-content-center me-5">
+        <a href="../Home-Page/index.html" target="_blank">
+            <i role="button" class="bi bi-house-door-fill text-danger fs-32 ps-2 d-block d-sm-none">
+            </i>
+        </a>
+
+        <span onclick="window.open('https://booktown-4ix2.onrender.com/Cart/index.html')">
+            <button type="button" class="btn btn-outline-danger">
+                <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-bag-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z">
+                    </path>
+                </svg>
+                Purchase
+            </button>
+        </span>
+        <a class="link" href="../../SignUpModal/index.html" target="_blank" rel="noopener noreferrer">
+           
+        </a>
+        <i role="button" class="bi bi-list fs-32 ps-2 d-block d-sm-none"></i>
+    </div>
+      </div>
+      </div>
+    </section>
+    <section class="row-2 py-5 d-none d-sm-block" style="background-color: #6b066b; color: aliceblue; border-radius: 10px;" >
+      <div class="header-img p-5">
+        <div class="in-img-text bg-dark bg-opacity-25 my-5 p-5 d-flex flex-column justify-content-center gap-4">
+          <h1 class="fs-46 align-self-center">welcome to the town of books</h1>
+          <h3 class="fs-24 d-none d-md-block align-self-center ps-md-5 ms-md-5">easily find and purchase your favorite
+            books.</h3>
+        </div>
+      </div>
+    </section>
+    <section class="row-3">
+      <ul class="nav-bar list-unstyled d-none d-sm-flex">
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center">
+          <a href="../ProductsPage/LinkedHTMLs/self-dev-index.html" target="_blank" role="button" class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+           rel="noopener noreferrer">Self-Development</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center">
+          <a href="../ProductsPage/LinkedHTMLs/philosophy-index.html" target="_blank" role="button" class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+           rel="noopener noreferrer">Philosophy</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center">
+          <a href="../ProductsPage/LinkedHTMLs/novels-index.html" target="_blank" role="button" class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+           rel="noopener noreferrer">Novels</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center">
+          <a href="../ProductsPage/MainPage/index.html" target="_blank" role="button" class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+           rel="noopener noreferrer">Newest Books</a>
+        </li>
+        <li id="categorieSelector" class="categorie flex-grow-1 fs-18 text-center">
+          <a href="../ProductsPage/LinkedHTMLs/best.html" target="_blank" role="button" class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+           rel="noopener noreferrer">Best Of BookTown</a>
+        </li>
+      </ul>
+    </section>
+  </header>
+
+  <main class="main-body container mt-5 d-flex flex-column gap-5">
+
+    <section id="main" class="upper-main-body d-flex flex-column flex-xl-row gap-5 justify-content-start w-100">
+      <div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+        data-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://wallpaperaccess.com/full/2878928.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Picture of a boy rading a book">
+          </div>
+          <div class="carousel-item">
+            <img src="	https://wallpaperaccess.com/full/1771687.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Picture of a boy rading a book">
+          </div>
+          <div class="carousel-item">
+            <img src="	https://wallpaperaccess.com/full/1692872.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Picture of a boy rading a book">
+          </div>
+          <h3 class="d-block fs-38 position-absolute bottom-0 w-100 text-center py-5 mb-0 text-light bg-dark bg-opacity-50 rounded-4">Find any books you need!</h3>
+        </div>
+      </div>
+      <div class="newest-book d-none d-xl-flex align-items-center justify-content-center">
+        <div class="card d-flex col-1 flex-column align-items-center" style="width: 18rem;border: none;">
+          <img src="../IMG/deafults/best.png" class="card-img-top w-75" alt="image of a book">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title fs-24">Newest Book</h5>
+          </div>
+        </div>
+        <div class="col-6 border-start flex-grow-1 w-75 border-2 border-danger border-opacity-50">
+          <div class="thumb-wrapper d-flex flex-column align-items-center">
+            <div class="img-box">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61tqfa+xbWL._AC_UL226_SR226,226_.jpg" class="img-fluid" alt="book img">
+            </div>
+            <div class="thumb-content mt-5 d-flex flex-column align-items-center">
+              <h4 class="book-name text-center fs-24 text-secondary">Verity</h4>
+              <div class="ratings fs-22">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+                </div>
+              <p class="item-price text-secondary"><strike></strike><b>$11.26</b></p>
+              <button class="btn btn-outline-danger"> Add to Cart <i class="bi bi-bag"></i></button>
+            </div>
+          </div>
+      </div>
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3 d-xl-none">
+        <div class="col-md-12">
+          <h2>Newest <b>books</b></h2>
+          <div id="myCarousel2" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="newBooksCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="newBooksCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="newBooksCarouselItem3" class="row">
+                  <div class="col-sm-3">
+                  </div>
+                  <div class="col-sm-3">
+                  </div>
+                  <div class="col-sm-3">
+                  </div>
+                  <div class="col-sm-3">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel2" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="best-of-booktown shadow-sm">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+            <h2>best of <b>BookTown</b></h2>
+          <div id="myCarousel1" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestBooksCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestBooksCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestBooksCarouselItem3" class="row">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel1" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel1" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="best-deals">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>Best <b>Deals</b></h2>
+          <div id="myCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestDealsCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestDealsCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestDealsCarouselItem3" class="row">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="philosophy-img-pop-up">
+      <a href="../ProductsPage/LinkedHTMLs/philosophy-index.html" target="_blank"><div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+        data-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../IMG/deafults/nietche.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="fredrich nietzche">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/wallpaperflare.com_wallpaper.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="greek philosiphers">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/philo.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Philosophy">
+            </div>
+            <h4 class="d-block fs-48 position-absolute bottom-0 w-100 text-center py-5 mb-0 text-light bg-dark bg-opacity-50 rounded-4">Read Philosophy books here.</h4>
+          </div>
+      </div></a>
+    </section>
+    <section class="Philosophy">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>best of <b>Philosophy</b></h2>
+          <div id="myCarousel4" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestOfPhilosophyCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestOfPhilosophyCarouselItem2" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel4" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel4" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Self-Development">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>Best of <b>self-development</b></h2>
+          <div id="myCarousel5" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestSelfDevCarouselItem1" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestSelfDevCarouselItem2" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestSelfDevCarouselItem3" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel5" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel5" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="novels-img-pop-up">
+      <a href="../ProductsPage/LinkedHTMLs/novels-index.html" target="_blank"><div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+        data-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../IMG/deafults/books.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="novels">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/novels.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="novels">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/comics.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="novels">
+            </div>
+            <h4 class="d-block fs-48 position-absolute bottom-0 w-100 text-center py-5 mb-0 text-light bg-dark bg-opacity-50 rounded-4">Read the best novels here.</h4>
+          </div>
+      </div></a>
+    </section>
+    <section class="novels text-center">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>Best of <b>novels</b></h2>
+          <div id="myCarousel6" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestNovelsCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestNovelsCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestNovelsCarouselItem3" class="row">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel6" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel6" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="../ProductsPage/MainPage/index.html" target="_blank">
+        <button class="btn btn-danger fs-28 mt-5 rounded p-3">See all the books <i class="bi bi-arrow-right"></i></button>
+      </a>
+
+    </section>
+  </main>
+
+  
+
+  
+<footer class="new_footer_area bg_color">
+  <div class="new_footer_top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                      <p>Don’t miss any updates of our new Books and Novels.!</p>
+                      <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                          <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                          <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                          <p class="mchimp-errmessage" style="display: none;"></p>
+                          <p class="mchimp-sucmessage" style="display: none;"></p>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Android App</a></li>
+                          <li><a href="#">ios App</a></li>
+                          <li><a href="#">Desktop</a></li>
+                          <li><a href="#">Projects</a></li>
+                          <li><a href="#">My tasks</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="#">Term &amp; conditions</a></li>
+                          <li><a href="#">Reporting</a></li>
+                          <li><a href="#">Documentation</a></li>
+                          <li><a href="#">Support Policy</a></li>
+                          <li><a href="#">Privacy</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18"></h3>
+                      <div class="f_social_icon">
+                          
+                         
+                    
+                     
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+      </div>
+  </div>
+  <div class="footer_bottom">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-6 col-sm-5 text-right">
+                
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script type="module" src="../JS/app.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
